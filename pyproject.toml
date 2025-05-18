@@ -1,0 +1,18 @@
+[project]
+name = "diffsynth"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.7.0",
+    "torchvision>=0.22.0",
+    "imageio[ffmpeg]",
+    "transformers>=4.51.3",
+    "safetensors>=0.5.3",
+    "einops>=0.8.1",
+    "sentencepiece>=0.2.0",
+    "protobuf>=6.31.0",
+    "modelscope>=1.26.0",
+    "ftfy>=6.3.1",
+]

@@ -30,7 +30,7 @@ model_manager.load_models(
     torch_dtype=torch.bfloat16, # You can set `torch_dtype=torch.float8_e4m3fn` to enable FP8 quantization.
 )
 pipe = WanVideoPipeline.from_model_manager(model_manager, torch_dtype=torch.bfloat16, device="cuda")
-pipe.enable_vram_management(num_persistent_param_in_dit=None)
+pipe.enable_vram_management(num_persistent_param_in_dit=6*10**9)
 
 # Download example image
 dataset_snapshot_download(
@@ -49,4 +49,4 @@ video = pipe(
     height=960, width=960,
     seed=1, tiled=True
 )
-save_video(video, "video.mp4", fps=15, quality=5)
+save_video(video, "flf2v_sample_video.mp4", fps=15, quality=5)
