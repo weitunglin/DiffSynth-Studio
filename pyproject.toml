@@ -15,4 +15,6 @@ dependencies = [
     "protobuf>=6.31.0",
     "modelscope>=1.26.0",
     "ftfy>=6.3.1",
+    "ipykernel>=6.29.5",
+    "opencv-python-headless",
 ]
